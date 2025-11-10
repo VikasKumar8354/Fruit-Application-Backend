@@ -103,6 +103,7 @@ public class BillService {
         }
         billRepo.deleteById(id);
     }
+
     public Page<Bill> getBillsWithPagination(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         return billRepo.findAll(pageable);

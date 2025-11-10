@@ -27,7 +27,9 @@ public class FruitService {
         fruitManagement.setId(id);
         return fruitRepo.save(fruitManagement);
     }
+
     public void deleteFruit(long id){
+
         fruitRepo.deleteById(id);
     }
 }
