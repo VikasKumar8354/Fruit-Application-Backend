@@ -9,8 +9,10 @@ import java.util.List;
 
 @Service
 public class VendorService {
+
     @Autowired
     VendorRepo vendorRepo;
+
     public Vendor addVendor(Vendor vendor){
         return vendorRepo.save(vendor);
     }
