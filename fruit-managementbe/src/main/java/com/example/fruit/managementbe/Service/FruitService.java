@@ -17,12 +17,15 @@ public class FruitService {
     public FruitManagement addFruit(FruitManagement fruitManagement){
         return fruitRepo.save(fruitManagement);
     }
+
     public List<FruitManagement>getAllFruits(){
         return fruitRepo.findAll();
     }
+
     public FruitManagement getFruitById(long id){
         return fruitRepo.findById(id).orElse(null);
     }
+
     public FruitManagement updateFruit(long id,FruitManagement fruitManagement){
         fruitManagement.setId(id);
         return fruitRepo.save(fruitManagement);
