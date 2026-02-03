@@ -16,16 +16,20 @@ public class VendorService {
     public Vendor addVendor(Vendor vendor){
         return vendorRepo.save(vendor);
     }
+
     public List<Vendor> getAllVendor(){
         return vendorRepo.findAll();
     }
+
     public Vendor getById(long id){
         return vendorRepo.findById(id).orElse(null);
     }
+
     public Vendor updateVendor(long id,Vendor vendor){
        vendor.setId(id);
        return vendorRepo.save(vendor);
     }
+
     public void deleteVendor(long id){
         vendorRepo.deleteById(id);
     }
