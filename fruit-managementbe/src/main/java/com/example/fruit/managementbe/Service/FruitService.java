@@ -32,7 +32,6 @@ public class FruitService {
     }
 
     public void deleteFruit(long id){
-
         fruitRepo.deleteById(id);
     }
 }
